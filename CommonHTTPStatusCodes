@@ -1,0 +1,56 @@
+# HTTP Status Codes Cheat Sheet
+
+## 🔵 1XX – Informational
+| Code | Meaning              | Description                                     |
+|------|----------------------|-------------------------------------------------|
+| 100  | Continue             | Request received, continue process              |
+| 101  | Switching Protocols  | Switching to a different protocol as requested |
+| 102  | Processing (WebDAV)  | Server is processing request                   |
+
+---
+
+## 🟢 2XX – Success
+| Code | Meaning       | Description                                      |
+|------|----------------|--------------------------------------------------|
+| 200  | OK             | Request succeeded                                |
+| 201  | Created        | Resource successfully created                    |
+| 202  | Accepted       | Request accepted but not yet processed           |
+| 204  | No Content     | No content to send, but headers may be useful   |
+| 206  | Partial Content| Partial response to a range request              |
+
+---
+
+## 🟡 3XX – Redirection
+| Code | Meaning             | Description                                   |
+|------|---------------------|-----------------------------------------------|
+| 301  | Moved Permanently   | Resource has been permanently moved           |
+| 302  | Found               | Temporary redirection                         |
+| 303  | See Other           | Redirect using GET method                     |
+| 304  | Not Modified        | Resource not modified since last request      |
+| 307  | Temporary Redirect  | Same method should be used for the request    |
+| 308  | Permanent Redirect  | Like 301 but doesn't change request method    |
+
+---
+
+## 🔴 4XX – Client Errors
+| Code | Meaning            | Description                                      |
+|------|--------------------|--------------------------------------------------|
+| 400  | Bad Request        | Malformed syntax or invalid request              |
+| 401  | Unauthorized       | Authentication required                          |
+| 403  | Forbidden          | Authenticated, but not allowed                   |
+| 404  | Not Found          | Resource not found                               |
+| 405  | Method Not Allowed | HTTP method not supported                        |
+| 409  | Conflict           | Request conflicts with current state             |
+| 410  | Gone               | Resource no longer available                     |
+| 429  | Too Many Requests  | Rate limiting triggered                          |
+
+---
+
+## ⚫ 5XX – Server Errors
+| Code | Meaning              | Description                                     |
+|------|----------------------|-------------------------------------------------|
+| 500  | Internal Server Error| Generic server error                            |
+| 501  | Not Implemented      | Server doesn't support the requested method     |
+| 502  | Bad Gateway          | Invalid response from upstream server           |
+| 503  | Service Unavailable  | Server temporarily overloaded or down           |
+| 504  | Gateway Timeout      | Upstream server failed to respond in time       |
